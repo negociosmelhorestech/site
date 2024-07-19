@@ -2099,6 +2099,13 @@ textarea.w-input, textarea.w-select {
   --lime-green: #5ec045;
 }
 
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .w-checkbox {
   margin-bottom: 5px;
   padding-left: 20px;
@@ -2142,6 +2149,18 @@ textarea.w-input, textarea.w-select {
 
 .w-checkbox-input--inputType-custom.w--redirected-focus {
   box-shadow: 0 0 3px 1px #3898ec;
+}
+
+@media screen and (max-width: 991px) {
+  .w-layout-blockcontainer {
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
 }
 
 body {
@@ -3550,9 +3569,12 @@ figcaption {
 
 .team-image-block-overlay {
   color: #fff;
+  -webkit-text-fill-color: inherit;
   background-color: rgba(0, 0, 0, .3);
+  background-clip: border-box;
   width: 100%;
   padding: 45px 35px 35px;
+  display: block;
   overflow: hidden;
 }
 
@@ -4741,7 +4763,7 @@ figcaption {
 }
 
 .home-intro-link-block {
-  background-image: url("../images/home-business-1.jpg");
+  background-image: url("../images/bodysolutions.jpg");
   background-position: 50% 0;
   background-size: cover;
   border-radius: 3px;
@@ -4758,17 +4780,19 @@ figcaption {
 }
 
 .home-intro-link-block._2 {
-  background-image: url("../images/home-business-2.jpg");
+  background-image: url("../images/new-style-modeler-hero-2.png");
   background-size: cover;
   height: 450px;
 }
 
 .home-intro-link-block._3 {
-  background-image: url("../images/home-app.jpg");
+  background-image: url("../images/painel_bi_wallpapers.png");
 }
 
 .intro-block-overlay {
   opacity: 0;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
@@ -4778,6 +4802,7 @@ figcaption {
   height: 100%;
   transition: background-color .2s, opacity .2s;
   display: flex;
+  transform: translate(0);
 }
 
 .intro-block-overlay:hover {
@@ -5954,6 +5979,7 @@ figcaption {
 }
 
 .logo {
+  color: #000;
   height: 40px;
   margin-top: 3px;
 }
@@ -5965,6 +5991,10 @@ figcaption {
 .video-section {
   width: 100%;
   height: auto;
+}
+
+.transparant-menu-button {
+  border: 1px solid #745252;
 }
 
 .dark-footer-link {
